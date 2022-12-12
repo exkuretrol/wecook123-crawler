@@ -46,7 +46,7 @@ for page in recipes_list:
     parts = h3s[:step_pos]
     steps = h3s[step_pos:]
 
-    with recipe_file.open("w") as f:
+    with recipe_file.open("w", encoding="utf-8") as f:
         f.write(f"# {soup.find('h1').text}\n")
         f.write(f"\n原文連結：{page['url']}\n")
         f.write(f"\n## {intro}\n")
